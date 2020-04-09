@@ -42,7 +42,7 @@ a {
   .c-navbar__logo {
     flex-grow: 0;
     font-weight: 700;
-    font-size: 1.6em;
+    font-size: 1.8em;
     color: var(--neutral-very-dark-violet);
   }
   .c-navbar__nav {
@@ -62,7 +62,7 @@ a {
     .c-navbar__link {
       margin-left: 10px;
       font-weight: 700;
-      font-size: 0.6em;
+      font-size: 0.8em;
       a {
         color: var(--neutral-grayish-violet);
         &:hover {
@@ -350,7 +350,8 @@ a {
     color: var(--neutral-very-dark-blue);
   }
   .c-card__desc {
-    font-size: 0.65em;
+    font-size: 0.7em;
+    font-weight: 500;
     margin: 5px 0 0;
     color: var(--neutral-grayish-violet);
   }
@@ -592,7 +593,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
   .c-navbar {
     padding-top: 20px;
     flex-direction: column;
