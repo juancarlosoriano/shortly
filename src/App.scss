@@ -7,14 +7,20 @@
   --neutral-grayish-violet: hsl(257, 7%, 63%);
   --neutral-very-dark-blue: hsl(255, 11%, 22%);
   --neutral-very-dark-violet: hsl(260, 8%, 14%);
+
+  --primary-font-family: "Poppins", sans-serif;
 }
 
 // Sass Variables
 $width-break-point-700: 700px;
 
 body {
-  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+}
+
+body,
+input {
+  font-family: var(--primary-font-family);
 }
 
 *:focus {
@@ -36,6 +42,7 @@ a {
 }
 
 .c-navbar {
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +51,9 @@ a {
     font-weight: 700;
     font-size: 1.8em;
     color: var(--neutral-very-dark-violet);
+    & > * {
+      vertical-align: middle;
+    }
   }
   .c-navbar__nav {
     flex-grow: 1;
@@ -83,12 +93,13 @@ a {
         color: white;
         &:hover {
           color: white;
-          opacity: 70%;
+          opacity: 0.7;
         }
       }
     }
   }
   .c-navbar__btn-collapse {
+    display: none;
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -102,13 +113,15 @@ a {
     right: 5vw;
     cursor: pointer;
     &:hover {
-      background-color: black;
+      background-color: var(--neutral-gray);
       color: white;
     }
-    display: none;
     &.c-navbar__btn-collapse--active {
       color: white;
-      background-color: var(--neutral-gray);
+      background-color: black;
+      &:hover {
+        background-color: var(--neutral-gray);
+      }
     }
   }
 }
@@ -144,8 +157,7 @@ a {
     font-size: 0.8em;
     margin-top: 25px;
     &:hover {
-      color: white;
-      opacity: 70%;
+      opacity: 0.7;
     }
   }
   .c-jumbotron__img {
@@ -186,10 +198,10 @@ a {
         padding: 0 20px;
         color: var(--neutral-grayish-violet);
         &::placeholder {
-          opacity: 70%;
+          opacity: 0.7;
         }
         &::-ms-input-placeholder {
-          opacity: 70%;
+          opacity: 0.7;
         }
       }
       &[type="submit"] {
@@ -205,13 +217,14 @@ a {
     .c-shortener__form-error-msg {
       position: absolute;
       bottom: 16px;
-      font-size: 0.7em;
+      font-size: 0.8em;
       color: var(--secondary-red);
     }
     &.c-shortener__form--error {
       input {
         &[type="text"] {
-          border: 1px solid red;
+          border: 1px solid var(--secondary-red);
+          color: var(--secondary-red);
           &::placeholder {
             color: var(--secondary-red);
           }
@@ -259,7 +272,6 @@ a {
   .c-link__btn {
     width: 80px;
     height: 30px;
-    font-family: "Poppins", sans-serif;
     font-weight: 700;
     background-color: var(--primary-cyan);
     color: white;
@@ -267,7 +279,7 @@ a {
     border: none;
     cursor: pointer;
     &:hover {
-      opacity: 70%;
+      opacity: 0.7;
     }
     &.c-link__btn--copied {
       background-color: black;
@@ -350,7 +362,7 @@ a {
     color: var(--neutral-very-dark-blue);
   }
   .c-card__desc {
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 500;
     margin: 5px 0 0;
     color: var(--neutral-grayish-violet);
@@ -361,7 +373,7 @@ a {
   text-align: center;
   background-image: url("./images/bg-boost-desktop.svg");
   background-color: var(--primary-dark-violet);
-  background-size: 100vw auto;
+  background-size: 100vw 100%;
   background-repeat: no-repeat;
   padding: 30px 0;
   display: flex;
@@ -383,7 +395,7 @@ a {
     font-size: 0.8em;
     &:hover {
       color: white;
-      opacity: 70%;
+      opacity: 0.7;
     }
   }
 }
@@ -414,12 +426,12 @@ a {
         .c-footer__site-links-title {
           color: white;
           margin: 0 0 8px;
-          font-size: 0.6em;
+          font-size: 0.8em;
         }
         .c-footer__site-link {
           color: var(--neutral-grayish-violet);
           text-decoration: none;
-          font-size: 0.6em;
+          font-size: 0.75em;
           margin: 0 0 8px;
           &:hover {
             color: var(--primary-cyan);
@@ -483,7 +495,7 @@ a {
       margin: 25px 0 0;
       &:hover {
         color: white;
-        opacity: 70%;
+        opacity: 0.7;
       }
     }
     .c-jumbotron__img {
@@ -498,6 +510,7 @@ a {
   }
 
   .c-shortener {
+    background-image: url("./images/bg-shorten-mobile.svg");
     background-size: cover;
     background-position: center;
     top: -80px;
@@ -582,6 +595,10 @@ a {
       left: calc(50% - 30px);
     }
   }
+
+  .c-cta-banner {
+    background-image: url("./images/bg-boost-mobile.svg");
+  }
 }
 
 @keyframes uncollapse {
@@ -655,7 +672,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 415px) {
   .l-container {
     margin: 0 5vw;
     max-width: 100vw;

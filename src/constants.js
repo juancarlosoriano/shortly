@@ -11,6 +11,9 @@ export const LEFT_LABELS = ["Features", "Pricing", "Resources"];
 
 export const RIGHT_LABELS = ["Login"];
 
+export const EMPTY_STRING_ERROR = "Please add a link.";
+export const INVALID_URL_ERROR = "Enter a valid URL.";
+
 export const CARD_LABELS = [
   {
     title: "Brand Recognition",

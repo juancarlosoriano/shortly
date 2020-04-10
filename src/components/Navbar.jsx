@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { LEFT_LABELS, RIGHT_LABELS } from "../constants";
+import logo from "../images/logo.svg";
 
 const NavbarLinkContainer = ({ labels, suffix, children }) => {
   return (
@@ -51,16 +52,31 @@ const Navbar = () => {
     }
   };
 
+  const navbarCollapseButtonClass = () => {
+    const baseClass = "c-navbar__btn-collapse";
+    if (collapse) {
+      return baseClass;
+    } else {
+      return baseClass + " c-navbar__btn-collapse--active";
+    }
+  };
+
   return (
     <nav className={navbarClass()}>
-      <div className="c-navbar__logo">Shortly</div>
+      <div className="c-navbar__logo">
+        <img src={logo} alt="shortly-logo" />
+      </div>
       <div className="c-navbar__nav">
         <NavbarLinkContainer labels={LEFT_LABELS} suffix="left" />
         <NavbarLinkContainer labels={RIGHT_LABELS} suffix="right">
           <NavbarPillButton label="Sign Up" suffix="right" />
         </NavbarLinkContainer>
       </div>
-      <button className="c-navbar__btn-collapse" onClick={handleClick}>
+      <button
+        aria-label="Show Dropdown Menu for Mobile Users"
+        className={navbarCollapseButtonClass()}
+        onClick={handleClick}
+      >
         <i className="fas fa-bars"></i>
       </button>
     </nav>
