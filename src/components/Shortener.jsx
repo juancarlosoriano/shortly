@@ -53,7 +53,7 @@ const Shortener = ({ handleLinkSubmission }) => {
   };
 
   return (
-    <section className="l-container c-shortener">
+    <div className="l-container c-shortener">
       <form
         className={shortenerFormClass()}
         action="/"
@@ -74,7 +74,7 @@ const Shortener = ({ handleLinkSubmission }) => {
           </span>
         )}
       </form>
-    </section>
+    </div>
   );
 };
 

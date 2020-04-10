@@ -7,7 +7,7 @@ import {
 
 const SiteLink = ({ label }) => {
   return (
-    <a className="c-footer__site-link" href="#home">
+    <a className="c-footer__site-link" href="javascript:void(0)">
       {label}
     </a>
   );
@@ -26,7 +26,7 @@ const SiteLinkColumn = ({ title, labels }) => {
 
 const SocialLink = ({ title, icon }) => {
   return (
-    <a className="c-footer__social-link" href="#home">
+    <a className="c-footer__social-link" href="javascript:void(0)">
       <img src={icon} alt={`icon-${title}`} />
     </a>
   );
@@ -61,7 +61,7 @@ const Footer = () => {
         >
           Frontend Mentor
         </a>
-        . &nbsp;Coded by <a href="#home">JC Soriano</a>.
+        . &nbsp;Coded by <a href="javascript:void(0)">JC Soriano</a>.
         <p>
           Check out the{" "}
           <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">

@@ -10,7 +10,7 @@ const Jumbotron = () => {
           links are performing.
         </span>
         <br />
-        <a className="c-jumbotron__button--pill" href="#home">
+        <a className="c-jumbotron__button--pill" href="javascript:void(0)">
           Get Started
         </a>
       </div>
