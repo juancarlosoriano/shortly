@@ -16,7 +16,7 @@ const NavbarLinkContainer = ({ labels, suffix, children }) => {
 const NavbarLink = ({ label, suffix, linkClassName }) => {
   return (
     <li className={`c-navbar__link c-navbar__link--${suffix}`}>
-      <a className={linkClassName} href="javascript:void(0)">
+      <a className={linkClassName} href="#home">
         {label}
       </a>
     </li>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Jumbotron = () => {
   return (
-    <div className="l-container c-jumbotron">
+    <div id="#" className="l-container c-jumbotron">
       <div className="c-jumbotron__left-pane">
         <h1 className="c-jumbotron__title">More than just shorter links</h1>
         <span className="c-jumbotron__subtitle">
@@ -10,7 +10,7 @@ const Jumbotron = () => {
           links are performing.
         </span>
         <br />
-        <a className="c-jumbotron__button--pill" href="javascript:void(0)">
+        <a className="c-jumbotron__button--pill" href="#home">
           Get Started
         </a>
       </div>

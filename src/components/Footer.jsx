@@ -61,7 +61,7 @@ const Footer = () => {
         >
           Frontend Mentor
         </a>
-        . &nbsp;Coded by <a href="javascript:void(0)">JC Soriano</a>.
+        . &nbsp;Coded by <a href="#home">JC Soriano</a>.
         <p>
           Check out the{" "}
           <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">
