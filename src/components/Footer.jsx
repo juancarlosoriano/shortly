@@ -7,7 +7,7 @@ import {
 
 const SiteLink = ({ label }) => {
   return (
-    <a className="c-footer__site-link" href="javascript:void(0)">
+    <a className="c-footer__site-link" href="#home">
       {label}
     </a>
   );
@@ -26,7 +26,7 @@ const SiteLinkColumn = ({ title, labels }) => {
 
 const SocialLink = ({ title, icon }) => {
   return (
-    <a className="c-footer__social-link" href="javascript:void(0)">
+    <a className="c-footer__social-link" href="#home">
       <img src={icon} alt={`icon-${title}`} />
     </a>
   );
