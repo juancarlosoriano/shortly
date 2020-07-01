@@ -15,6 +15,7 @@ function App() {
       <Infographic />
       <CtaBanner />
       <Footer />
+      <h1>Hello World</h1>
     </div>
   );
 }
